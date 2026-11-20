@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №4 — Weekly Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lab4.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <a href="../../index.html" class="back-link">На головну</a>
+    </div>
+
+    <main class="planner">
+        <header class="planner-header">
+            <h1>WEEKLY PLAN</h1>
+
+            <div class="meta-box">
+                <label for="week-of">WEEK OF</label>
+                <input type="text" id="week-of" placeholder="Nov 23 – Nov 29">
+            </div>
+
+            <div class="meta-box">
+                <label for="healthy-habit">HEALTHY HABIT</label>
+                <input type="text" id="healthy-habit" placeholder="Drink 2L water daily">
+            </div>
+
+            <div class="habit-checks">
+                <label class="check-label">
+                    <input type="checkbox">
+                    <span>ROCKED IT</span>
+                </label>
+                <label class="check-label">
+                    <input type="checkbox">
+                    <span>ROOM FOR IMPROVEMENT</span>
+                </label>
+            </div>
+        </header>
+
+        <section class="planner-body">
+            <aside class="todo-column">
+                <h2>TO DO</h2>
+
+                <div class="todo-group">
+                    <h3>TOP 3 GOALS</h3>
+                    <div class="task-row">
+                        <input type="checkbox" aria-label="Goal 1">
+                        <input type="text" placeholder="Goal 1...">
+                    </div>
+                    <div class="task-row">
+                        <input type="checkbox" aria-label="Goal 2">
+                        <input type="text" placeholder="Goal 2...">
+                    </div>
+                    <div class="task-row">
+                        <input type="checkbox" aria-label="Goal 3">
+                        <input type="text" placeholder="Goal 3...">
+                    </div>
+                </div>
+
+                <div class="todo-group">
+                    <h3>EVERYTHING ELSE</h3>
+                    <div class="task-row">
+                        <input type="checkbox" aria-label="Task 1">
+                        <input type="text">
+                    </div>
+                    <div class="task-row">
+                        <input type="checkbox" aria-label="Task 2">
+                        <input type="text">
+                    </div>
+                    <div class="task-row">
+                        <input type="checkbox" aria-label="Task 3">
+                        <input type="text">
+                    </div>
+                    <div class="task-row">
+                        <input type="checkbox" aria-label="Task 4">
+                        <input type="text">
+                    </div>
+                    <div class="task-row">
+                        <input type="checkbox" aria-label="Task 5">
+                        <input type="text">
+                    </div>
+                    <div class="task-row">
+                        <input type="checkbox" aria-label="Task 6">
+                        <input type="text">
+                    </div>
+                    <div class="task-row">
+                        <input type="checkbox" aria-label="Task 7">
+                        <input type="text">
+                    </div>
+                    <div class="task-row">
+                        <input type="checkbox" aria-label="Task 8">
+                        <input type="text">
+                    </div>
+                </div>
+            </aside>
+
+            <div class="right-area">
+                <div class="days-grid">
+                    <article class="day-card">
+                        <div class="day-head">
+                            <h3>MONDAY</h3>
+                            <input type="checkbox" aria-label="Monday done">
+                        </div>
+                        <textarea placeholder="Write tasks & notes..."></textarea>
+                    </article>
+
+                    <article class="day-card">
+                        <div class="day-head">
+                            <h3>TUESDAY</h3>
+                            <input type="checkbox" aria-label="Tuesday done">
+                        </div>
+                        <textarea placeholder="Write tasks & notes..."></textarea>
+                    </article>
+
+                    <article class="day-card">
+                        <div class="day-head">
+                            <h3>WEDNESDAY</h3>
+                            <input type="checkbox" aria-label="Wednesday done">
+                        </div>
+                        <textarea placeholder="Write tasks & notes..."></textarea>
+                    </article>
+
+                    <article class="day-card">
+                        <div class="day-head">
+                            <h3>THURSDAY</h3>
+                            <input type="checkbox" aria-label="Thursday done">
+                        </div>
+                        <textarea placeholder="Write tasks & notes..."></textarea>
+                    </article>
+
+                    <article class="day-card">
+                        <div class="day-head">
+                            <h3>FRIDAY</h3>
+                            <input type="checkbox" aria-label="Friday done">
+                        </div>
+                        <textarea placeholder="Write tasks & notes..."></textarea>
+                    </article>
+
+                    <div class="weekend-stack">
+                        <article class="day-card">
+                            <div class="day-head">
+                                <h3>SATURDAY</h3>
+                                <input type="checkbox" aria-label="Saturday done">
+                            </div>
+                            <textarea placeholder="Weekend plans..."></textarea>
+                        </article>
+
+                        <article class="day-card">
+                            <div class="day-head">
+                                <h3>SUNDAY</h3>
+                                <input type="checkbox" aria-label="Sunday done">
+                            </div>
+                            <textarea placeholder="Reset & prep..."></textarea>
+                        </article>
+                    </div>
+                </div>
+
+                <section class="next-week">
+                    <h3>NEXT WEEK</h3>
+                    <div class="next-week-grid">
+                        <div class="task-row">
+                            <input type="checkbox" aria-label="Next week 1">
+                            <input type="text">
+                        </div>
+                        <div class="task-row">
+                            <input type="checkbox" aria-label="Next week 2">
+                            <input type="text">
+                        </div>
+                        <div class="task-row">
+                            <input type="checkbox" aria-label="Next week 3">
+                            <input type="text">
+                        </div>
+                        <div class="task-row">
+                            <input type="checkbox" aria-label="Next week 4">
+                            <input type="text">
+                        </div>
+                        <div class="task-row">
+                            <input type="checkbox" aria-label="Next week 5">
+                            <input type="text">
+                        </div>
+                        <div class="task-row">
+                            <input type="checkbox" aria-label="Next week 6">
+                            <input type="text">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
