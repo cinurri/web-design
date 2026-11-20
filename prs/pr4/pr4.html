@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №4 — Fullsize Keyboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pr4.css">
+</head>
+<body>
+
+    <a href="../../index.html" class="back-link">← На головну</a>
+
+    <div class="keyboard-wrapper">
+        <div class="cable"></div>
+
+        <div class="keyboard">
+            <input type="checkbox" id="num-toggle" class="lock-input" checked>
+            <input type="checkbox" id="caps-toggle" class="lock-input">
+            <input type="checkbox" id="scroll-toggle" class="lock-input">
+
+            <div class="block-main">
+                <button type="button" class="key mod k-esc">Esc</button>
+                <div class="spacer-f1"></div>
+                <button type="button" class="key mod k-f1">F1</button>
+                <button type="button" class="key mod k-f2">F2</button>
+                <button type="button" class="key mod k-f3">F3</button>
+                <button type="button" class="key mod k-f4">F4</button>
+                <div class="spacer-f2"></div>
+                <button type="button" class="key mod k-f5">F5</button>
+                <button type="button" class="key mod k-f6">F6</button>
+                <button type="button" class="key mod k-f7">F7</button>
+                <button type="button" class="key mod k-f8">F8</button>
+                <div class="spacer-f3"></div>
+                <button type="button" class="key mod k-f9">F9</button>
+                <button type="button" class="key mod k-f10">F10</button>
+                <button type="button" class="key mod k-f11">F11</button>
+                <button type="button" class="key mod k-f12">F12</button>
+
+                <button type="button" class="key dual k-tilde"><span>~</span><span>`</span></button>
+                <button type="button" class="key dual k-1"><span>!</span><span>1</span></button>
+                <button type="button" class="key dual k-2"><span>@</span><span>2</span></button>
+                <button type="button" class="key dual k-3"><span>#</span><span>3</span></button>
+                <button type="button" class="key dual k-4"><span>$</span><span>4</span></button>
+                <button type="button" class="key dual k-5"><span>%</span><span>5</span></button>
+                <button type="button" class="key dual k-6"><span>^</span><span>6</span></button>
+                <button type="button" class="key dual k-7"><span>&amp;</span><span>7</span></button>
+                <button type="button" class="key dual k-8"><span>*</span><span>8</span></button>
+                <button type="button" class="key dual k-9"><span>(</span><span>9</span></button>
+                <button type="button" class="key dual k-0"><span>)</span><span>0</span></button>
+                <button type="button" class="key dual k-minus"><span>_</span><span>-</span></button>
+                <button type="button" class="key dual k-equal"><span>+</span><span>=</span></button>
+                <button type="button" class="key mod k-backspace">Backspace</button>
+
+                <button type="button" class="key mod k-tab">Tab</button>
+                <button type="button" class="key k-q">Q</button>
+                <button type="button" class="key k-w">W</button>
+                <button type="button" class="key k-e">E</button>
+                <button type="button" class="key k-r">R</button>
+                <button type="button" class="key k-t">T</button>
+                <button type="button" class="key k-y">Y</button>
+                <button type="button" class="key k-u">U</button>
+                <button type="button" class="key k-i">I</button>
+                <button type="button" class="key k-o">O</button>
+                <button type="button" class="key k-p">P</button>
+                <button type="button" class="key dual k-lbracket"><span>{</span><span>[</span></button>
+                <button type="button" class="key dual k-rbracket"><span>}</span><span>]</span></button>
+                <button type="button" class="key dual k-backslash"><span>|</span><span>\</span></button>
+
+                <label for="caps-toggle" class="key mod k-caps">Caps Lock</label>
+                <button type="button" class="key k-a">A</button>
+                <button type="button" class="key k-s">S</button>
+                <button type="button" class="key k-d">D</button>
+                <button type="button" class="key k-f">F</button>
+                <button type="button" class="key k-g">G</button>
+                <button type="button" class="key k-h">H</button>
+                <button type="button" class="key k-j">J</button>
+                <button type="button" class="key k-k">K</button>
+                <button type="button" class="key k-l">L</button>
+                <button type="button" class="key dual k-semi"><span>:</span><span>;</span></button>
+                <button type="button" class="key dual k-quote"><span>"</span><span>'</span></button>
+                <button type="button" class="key mod k-enter">Enter</button>
+
+                <button type="button" class="key mod k-lshift">Shift</button>
+                <button type="button" class="key k-z">Z</button>
+                <button type="button" class="key k-x">X</button>
+                <button type="button" class="key k-c">C</button>
+                <button type="button" class="key k-v">V</button>
+                <button type="button" class="key k-b">B</button>
+                <button type="button" class="key k-n">N</button>
+                <button type="button" class="key k-m">M</button>
+                <button type="button" class="key dual k-comma"><span>&lt;</span><span>,</span></button>
+                <button type="button" class="key dual k-dot"><span>&gt;</span><span>.</span></button>
+                <button type="button" class="key dual k-slash"><span>?</span><span>/</span></button>
+                <button type="button" class="key mod k-rshift">Shift</button>
+
+                <button type="button" class="key mod k-lctrl">Ctrl</button>
+                <button type="button" class="key mod k-lwin">Win</button>
+                <button type="button" class="key mod k-lalt">Alt</button>
+                <button type="button" class="key k-space"></button>
+                <button type="button" class="key mod k-ralt">Alt</button>
+                <button type="button" class="key mod k-rwin">Win</button>
+                <button type="button" class="key mod k-menu">Menu</button>
+                <button type="button" class="key mod k-rctrl">Ctrl</button>
+            </div>
+
+            <div class="block-nav">
+                <button type="button" class="key mod small n-prtsc">PrtSc</button>
+                <label for="scroll-toggle" class="key mod small n-scrlk">ScrLk</label>
+                <button type="button" class="key mod small n-pause">Pause</button>
+
+                <button type="button" class="key mod small n-ins">Ins</button>
+                <button type="button" class="key mod small n-home">Home</button>
+                <button type="button" class="key mod small n-pgup">PgUp</button>
+
+                <button type="button" class="key mod small n-del">Del</button>
+                <button type="button" class="key mod small n-end">End</button>
+                <button type="button" class="key mod small n-pgdn">PgDn</button>
+
+                <button type="button" class="key mod n-up">↑</button>
+                <button type="button" class="key mod n-left">←</button>
+                <button type="button" class="key mod n-down">↓</button>
+                <button type="button" class="key mod n-right">→</button>
+            </div>
+
+            <div class="block-numpad">
+                <div class="leds">
+                    <div class="led-item">
+                        <span>Num</span>
+                        <span class="led led-num"></span>
+                    </div>
+                    <div class="led-item">
+                        <span>Caps</span>
+                        <span class="led led-caps"></span>
+                    </div>
+                    <div class="led-item">
+                        <span>Scrl</span>
+                        <span class="led led-scroll"></span>
+                    </div>
+                </div>
+
+                <label for="num-toggle" class="key mod small k-numlock">Num<br>Lock</label>
+                <button type="button" class="key mod">/</button>
+                <button type="button" class="key mod">*</button>
+                <button type="button" class="key mod">-</button>
+
+                <button type="button" class="key">7</button>
+                <button type="button" class="key">8</button>
+                <button type="button" class="key">9</button>
+                <button type="button" class="key mod k-numplus">+</button>
+
+                <button type="button" class="key">4</button>
+                <button type="button" class="key">5</button>
+                <button type="button" class="key">6</button>
+
+                <button type="button" class="key">1</button>
+                <button type="button" class="key">2</button>
+                <button type="button" class="key">3</button>
+                <button type="button" class="key mod small k-numenter">Enter</button>
+
+                <button type="button" class="key k-num0">0</button>
+                <button type="button" class="key">.</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
