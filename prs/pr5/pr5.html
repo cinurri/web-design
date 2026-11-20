@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №5 - Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pr5.css">
+</head>
+<body>
+
+    <a href="../../index.html" class="back-portfolio">На головну</a>
+
+    <header class="header">
+        <div class="header-container">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="burger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="nav">
+                <a href="#works" class="nav-link">Works</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <h1 class="hero-title">Hi, I am Kostya,<br>Cook</h1>
+                    <p class="hero-text">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                        Velit officia consequat duis enim velit mollit. Exercitation veniam consequat 
+                        sunt nostrud amet.
+                    </p>
+                    <a href="#works" class="btn-resume">Download Resume</a>
+                </div>
+
+                <div class="hero-avatar-wrap">
+                    <img src="../../img/avatar.jpg" alt="John portrait" class="hero-avatar">
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="recent-posts">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Recent posts</h2>
+                    <a href="#blog" class="view-all">View all</a>
+                </div>
+
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <h3 class="post-title">
+                            <a href="#blog">Making a design system from scratch</a>
+                        </h3>
+                        <div class="post-meta">
+                            <span>20 Nov 2026</span>
+                            <span class="meta-sep">|</span>
+                            <span>Design, Pattern</span>
+                        </div>
+                        <p class="post-excerpt">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat 
+                            sunt nostrud amet.
+                        </p>
+                    </article>
+
+                    <article class="post-card">
+                        <h3 class="post-title">
+                            <a href="#blog">Creating pixel perfect icons in Figma</a>
+                        </h3>
+                        <div class="post-meta">
+                            <span>12 Feb 2020</span>
+                            <span class="meta-sep">|</span>
+                            <span>Figma, Icon Design</span>
+                        </div>
+                        <p class="post-excerpt">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat 
+                            sunt nostrud amet.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="featured-works">
+            <div class="container">
+                <h2 class="section-title">Featured works</h2>
+
+                <div class="works-list">
+                    <article class="work-card">
+                        <div class="work-thumb thumb-1">
+                            <span>UI / DASHBOARD</span>
+                        </div>
+                        <div class="work-body">
+                            <h3 class="work-title"><a href="#works">Designing Dashboards</a></h3>
+                            <div class="work-meta">
+                                <span class="work-year">2026</span>
+                                <span class="work-category">Dashboard</span>
+                            </div>
+                            <p class="work-desc">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                                Velit officia consequat duis enim velit mollit. Exercitation veniam consequat 
+                                sunt nostrud amet.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <div class="work-thumb thumb-2">
+                            <span>ART / ILLUSTRATION</span>
+                        </div>
+                        <div class="work-body">
+                            <h3 class="work-title"><a href="#works">Vibrant Portraits of 2026</a></h3>
+                            <div class="work-meta">
+                                <span class="work-year">2026</span>
+                                <span class="work-category">Illustration</span>
+                            </div>
+                            <p class="work-desc">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                                Velit officia consequat duis enim velit mollit. Exercitation veniam consequat 
+                                sunt nostrud amet.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <div class="work-thumb thumb-3">
+                            <span>SWAG / TYPO</span>
+                        </div>
+                        <div class="work-body">
+                            <h3 class="work-title"><a href="#works">37 days of typo</a></h3>
+                            <div class="work-meta">
+                                <span class="work-year">2026</span>
+                                <span class="work-category">swaging</span>
+                            </div>
+                            <p class="work-desc">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                                Velit officia consequat duis enim velit mollit. Exercitation veniam consequat 
+                                sunt nostrud amet.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="footer">
+        <div class="social-links">
+            <a href="#">YT</a>
+            <a href="#">IG</a>
+            <a href="#">TW</a>
+            <a href="#">TG</a>
+        </div>
+        <p class="copyright">Copyright ©2026 All swag</p>
+    </footer>
+
+</body>
+</html>
