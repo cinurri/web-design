@@ -1,0 +1,283 @@
+:root {
+    --bg-color: #f4f6f9;
+    --surface-color: #ffffff;
+    --primary-color: #1e293b;
+    --accent-color: #2563eb;
+    --accent-hover: #1d4ed8;
+    --text-color: #334155;
+    --muted-text: #64748b;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка и навигация */
+.site-header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 28px 0 0;
+    margin-bottom: 32px;
+}
+
+.site-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-nav a {
+    display: block;
+    padding: 12px 16px;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #ffffff;
+    border-bottom-color: var(--accent-color);
+}
+
+/* Основной контент */
+main {
+    flex: 1;
+}
+
+.card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--bg-color);
+}
+
+/* Секция "Про мене" */
+.about-content {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    background-color: #e2e8f0;
+    flex-shrink: 0;
+}
+
+.about-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.about-info p {
+    margin-bottom: 14px;
+}
+
+.contact-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.contact-list a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* Карточки практических и лабораторных */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.work-item {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.work-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.work-item h3 a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.work-item h3 a:hover {
+    color: var(--accent-color);
+}
+
+.work-item p {
+    font-size: 0.92rem;
+    color: var(--muted-text);
+    margin-bottom: 16px;
+}
+
+.work-item.upcoming {
+    background-color: #f8fafc;
+    opacity: 0.8;
+}
+
+.btn {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Таблица расписания */
+.table-note {
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    margin-bottom: 16px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    margin-bottom: 20px;
+}
+
+.schedule-table caption {
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: left;
+    color: var(--primary-color);
+}
+
+.schedule-table th,
+.schedule-table td {
+    border: 1px solid var(--border-color);
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.schedule-table th {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.week-col {
+    background-color: #f1f5f9;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.back-link {
+    margin-top: 12px;
+}
+
+/* Футер */
+.site-footer {
+    background-color: var(--primary-color);
+    color: #94a3b8;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.site-footer p + p {
+    margin-top: 6px;
+}
+
+.site-footer a {
+    color: #e2e8f0;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
