@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №3 - Блокова модель</title>
+    <link rel="stylesheet" href="lab3pr.css">
+</head>
+<body>
+
+    <header class="yt-header">
+        <div class="header-left">
+            <button class="icon-btn" aria-label="Меню">☰</button>
+            <a href="#" class="yt-logo">
+                <span class="logo-badge">▶</span>
+                <span class="logo-text">YouTube</span>
+            </a>
+            <a href="../../index.html" class="back-portfolio">Повернутися на головну</a>
+        </div>
+
+        <div class="header-center">
+            <form class="search-form" action="#">
+                <input type="text" placeholder="Пошук" aria-label="Пошук">
+                <button type="submit" class="search-btn" aria-label="Шукати">🔍</button>
+            </form>
+            <button class="icon-btn mic-btn" aria-label="Голосовий пошук">🎤</button>
+        </div>
+
+        <div class="header-right">
+            <button class="create-btn">+ Створити</button>
+            <button class="icon-btn" aria-label="Сповіщення">🔔</button>
+            <div class="user-avatar">КБ</div>
+        </div>
+    </header>
+
+    <div class="yt-layout">
+        <aside class="yt-sidebar">
+            <nav class="sidebar-group">
+                <a href="#" class="sidebar-link active">
+                    <span class="nav-icon">🏠</span>
+                    <span>Головна</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="nav-icon">⚡</span>
+                    <span>Shorts</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="nav-icon">📺</span>
+                    <span>Підписки</span>
+                </a>
+            </nav>
+
+            <nav class="sidebar-group">
+                <div class="sidebar-title">Ви ›</div>
+                <a href="#" class="sidebar-link">
+                    <span class="nav-icon">🕒</span>
+                    <span>Історія</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="nav-icon">📑</span>
+                    <span>Плейлисти</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="nav-icon">⏱️</span>
+                    <span>Переглянути пізніше</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="nav-icon">👍</span>
+                    <span>Вподобані відео</span>
+                </a>
+            </nav>
+
+            <nav class="sidebar-group">
+                <div class="sidebar-title">Підписки</div>
+                <a href="#" class="sidebar-link">
+                    <span class="sub-dot c1"></span>
+                    <span>Dota 2 Highlights</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="sub-dot c2"></span>
+                    <span>Python &amp; Data Science</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="sub-dot c3"></span>
+                    <span>C# / .NET Dev</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="sub-dot c4"></span>
+                    <span>ДУІКТ Лекції</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="yt-main">
+            <div class="chips-bar">
+                <button class="chip active">Усі</button>
+                <button class="chip">Ігри</button>
+                <button class="chip">Програмування</button>
+                <button class="chip">Python</button>
+                <button class="chip">C#</button>
+                <button class="chip">Веб-розробка</button>
+                <button class="chip">Музика</button>
+                <button class="chip">Прямі трансляції</button>
+                <button class="chip">Алгоритми</button>
+                <button class="chip">Подкасти</button>
+            </div>
+
+            <section class="videos-flex">
+                <article class="video-card">
+                    <div class="thumbnail thumb-1">
+                        <span class="thumb-label">CSS FLEXBOX</span>
+                        <span class="duration">18:42</span>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-pic c1">WD</div>
+                        <div class="video-meta">
+                            <h3>Повний розбір Flexbox за 20 хвилин: від основ до адаптивних сіток</h3>
+                            <p class="channel-name">WebDev Практика</p>
+                            <p class="video-stats">142 тис. переглядів | 3 дні тому</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="thumbnail thumb-2">
+                        <span class="thumb-label">PYTHON ASYNC</span>
+                        <span class="duration">34:15</span>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-pic c2">PY</div>
+                        <div class="video-meta">
+                            <h3>Асинхронні боти на Python: архітектура та робота з SQLite</h3>
+                            <p class="channel-name">Python &amp; Data Science</p>
+                            <p class="video-stats">89 тис. переглядів | 1 тиждень тому</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="thumbnail thumb-3">
+                        <span class="thumb-label">C# OOP</span>
+                        <span class="duration">45:10</span>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-pic c3">C#</div>
+                        <div class="video-meta">
+                            <h3>Об'єктно-орієнтоване програмування на C#: інкапсуляція, наслідування, поліморфізм</h3>
+                            <p class="channel-name">C# / .NET Dev</p>
+                            <p class="video-stats">64 тис. переглядів | 2 тижні тому</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="thumbnail thumb-4">
+                        <span class="thumb-label">DOTA 2 PATCH</span>
+                        <span class="duration">22:08</span>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-pic c4">D2</div>
+                        <div class="video-meta">
+                            <h3>Аналіз мети першої позиції: білди на Morphling та Drow Ranger</h3>
+                            <p class="channel-name">Dota 2 Highlights</p>
+                            <p class="video-stats">215 тис. переглядів | 2 дні тому</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="thumbnail thumb-5">
+                        <span class="thumb-label">GIT WORKFLOW</span>
+                        <span class="duration">12:54</span>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-pic c5">GT</div>
+                        <div class="video-meta">
+                            <h3>Git та GitHub без болю: гілки, коміти, пул-реквести та GitHub Pages</h3>
+                            <p class="channel-name">Code Base</p>
+                            <p class="video-stats">310 тис. переглядів | 1 місяць тому</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="thumbnail thumb-6">
+                        <span class="thumb-label">LINUX MINT</span>
+                        <span class="duration">19:30</span>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-pic c6">LM</div>
+                        <div class="video-meta">
+                            <h3>Налаштування робочого середовища розробника на Linux Mint з нуля</h3>
+                            <p class="channel-name">Linux Workstation</p>
+                            <p class="video-stats">48 тис. переглядів | 5 днів тому</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="thumbnail thumb-7">
+                        <span class="thumb-label">C++ TREES</span>
+                        <span class="duration">27:49</span>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-pic c7">C++</div>
+                        <div class="video-meta">
+                            <h3>Структури даних на C++: бінарні дерева пошуку та алгоритми сортування</h3>
+                            <p class="channel-name">Algorithms UA</p>
+                            <p class="video-stats">53 тис. переглядів | 3 тижні тому</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="thumbnail thumb-8">
+                        <span class="thumb-label">LO-FI CODING</span>
+                        <span class="duration">1:42:00</span>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-pic c8">FM</div>
+                        <div class="video-meta">
+                            <h3>Dark Synth &amp; Lo-Fi Beats для нічного кодингу та підготовки до сесії</h3>
+                            <p class="channel-name">Night Code Radio</p>
+                            <p class="video-stats">1,2 млн переглядів | 4 місяці тому</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
