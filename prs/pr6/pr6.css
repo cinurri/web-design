@@ -92,13 +92,11 @@ body {
     color: #ffffff;
 }
 
-/* Пауза всех CSS-анимаций внутри сцены */
 #pause-toggle:checked ~ .scene,
 #pause-toggle:checked ~ .scene * {
     animation-play-state: paused !important;
 }
 
-/* Основная сцена */
 .scene {
     position: relative;
     width: 100%;
@@ -109,7 +107,6 @@ body {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
 }
 
-/* 1. Анимация неба (циклический градиент) */
 .sky {
     position: absolute;
     inset: 0;
@@ -118,7 +115,6 @@ body {
     animation: skyCycle 14s ease-in-out infinite alternate;
 }
 
-/* Мерцающие звёзды */
 .stars {
     position: absolute;
     inset: 0 0 180px 0;
@@ -133,7 +129,6 @@ body {
     animation: twinkle 3s ease-in-out infinite alternate;
 }
 
-/* Луна */
 .moon {
     position: absolute;
     top: 38px;
@@ -146,7 +141,6 @@ body {
     animation: moonPulse 5s ease-in-out infinite alternate;
 }
 
-/* 2. Анимация облаков */
 .cloud {
     position: absolute;
     height: 26px;
@@ -197,7 +191,6 @@ body {
     animation: driftCloud 22s linear infinite -6s;
 }
 
-/* 3. Параллакс-слои фона */
 .parallax-hills {
     position: absolute;
     left: 0;
@@ -224,7 +217,6 @@ body {
     animation: scrollLayer 9s linear infinite;
 }
 
-/* Земля и дорожка */
 .ground-grass {
     position: absolute;
     left: 0;
@@ -259,14 +251,12 @@ body {
     animation: scrollGround 1.6s linear infinite;
 }
 
-/* Общий класс спрайтов (покадровая смена через background-position) */
 .sprite {
     position: absolute;
     background-repeat: no-repeat;
     image-rendering: pixelated;
 }
 
-/* Герой: Umbreon бежит по тропе */
 .umbreon {
     left: 160px;
     bottom: 52px;
@@ -283,7 +273,6 @@ body {
         umbreonRun 0.42s ease-in-out infinite alternate;
 }
 
-/* Призрачный Gengar парит впереди */
 .gengar {
     right: 170px;
     bottom: 135px;
@@ -299,7 +288,6 @@ body {
         gengarFloat 2.8s ease-in-out infinite alternate;
 }
 
-/* Теневой шар между Gengar и Umbreon */
 .shadow-orb {
     position: absolute;
     right: 270px;
@@ -312,7 +300,6 @@ body {
     animation: orbAttack 2.6s ease-in infinite;
 }
 
-/* Haunter в верхней части леса */
 .haunter {
     right: 340px;
     top: 115px;
@@ -329,7 +316,7 @@ body {
         haunterSwoop 3.6s ease-in-out infinite alternate;
 }
 
-/* Zubat пролетает над лесом */
+
 .zubat {
     top: 72px;
     width: 76px;
@@ -343,7 +330,7 @@ body {
         zubatFly 11s linear infinite;
 }
 
-/* Режим ускорения (Sprint) */
+
 #sprint-toggle:checked ~ .scene .umbreon {
     filter: drop-shadow(0 0 16px #38bdf8);
     animation-duration: 0.22s, 0.22s;
@@ -361,7 +348,6 @@ body {
     animation-duration: 4.5s;
 }
 
-/* Ключевые кадры */
 @keyframes skyCycle {
     0% { background-position: 0% 0%; }
     100% { background-position: 0% 100%; }
