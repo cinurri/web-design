@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №6 — CSS-анімація та спрайти Покемонів</title>
+    <link rel="stylesheet" href="pr6.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <a href="../../index.html" class="back-btn">← На головну</a>
+        <h1>Лабораторна робота №6: Нічний ліс покемонів</h1>
+    </header>
+
+    <main class="stage-wrapper">
+        <input type="checkbox" id="pause-toggle" class="control-input">
+        <input type="checkbox" id="sprint-toggle" class="control-input">
+
+        <div class="controls">
+            <label for="pause-toggle" class="ctrl-btn pause-btn">Пауза / Старт</label>
+            <label for="sprint-toggle" class="ctrl-btn sprint-btn">Прискорення (Sprint)</label>
+        </div>
+
+        <section class="scene" aria-label="Анімована сцена з покемонами">
+            <div class="sky"></div>
+            <div class="stars"></div>
+            <div class="moon"></div>
+
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+
+            <div class="parallax-hills"></div>
+            <div class="parallax-trees"></div>
+
+            <div class="sprite zubat" role="img" aria-label="Zubat"></div>
+            <div class="sprite haunter" role="img" aria-label="Haunter"></div>
+            <div class="sprite gengar" role="img" aria-label="Gengar"></div>
+            <div class="shadow-orb"></div>
+
+            <div class="sprite umbreon" role="img" aria-label="Umbreon"></div>
+
+            <div class="ground-grass"></div>
+            <div class="ground-path"></div>
+        </section>
+    </main>
+
+</body>
+</html>
