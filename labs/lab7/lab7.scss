@@ -1,0 +1,339 @@
+$color-bg-deep: #070d1f;
+$color-bg-night: #111d3a;
+$color-surface-front: #162447;
+$color-surface-back: #f8fafc;
+$color-accent-red: #e63946;
+$color-accent-red-hover: #c92a37;
+$color-accent-gold: #ffb703;
+$color-accent-cyan: #38bdf8;
+$color-accent-emerald: #10b981;
+
+$color-text-light: #f1f5f9;
+$color-text-muted: #94a3b8;
+$color-text-dark: #1e293b;
+$color-border-gold: rgba(255, 183, 3, 0.35);
+
+$font-primary: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+$font-display: "Playfair Display", Georgia, serif;
+
+$card-width: 460px;
+$card-height: 540px;
+$radius-card: 20px;
+$radius-btn: 10px;
+$spacing-md: 24px;
+$spacing-lg: 36px;
+
+$transition-flip: 0.85s cubic-bezier(0.4, 0.2, 0.2, 1);
+$transition-fast: 0.25s ease;
+$shadow-card: 0 25px 60px rgba(0, 0, 0, 0.65);
+$shadow-gold: 0 0 25px rgba(255, 183, 3, 0.3);
+
+@use "variables" as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    font-family: $font-primary;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, $color-bg-night 0%, $color-bg-deep 100%);
+    color: $color-text-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 16px 32px;
+    overflow-x: hidden;
+    position: relative;
+
+    &__back-link {
+        position: fixed;
+        top: 18px;
+        left: 18px;
+        z-index: 50;
+        padding: 9px 15px;
+        background-color: rgba($color-bg-night, 0.9);
+        color: $color-text-light;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 8px;
+        transition: background-color $transition-fast, transform $transition-fast;
+
+        &:hover {
+            background-color: $color-accent-red;
+            transform: translateY(-2px);
+        }
+    }
+
+    &__container {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.snow {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+
+    &__layer {
+        position: absolute;
+        inset: -200px 0 0 0;
+        background-image:
+            radial-gradient(2.5px 2.5px at 15% 20%, #ffffff, transparent),
+            radial-gradient(2px 2px at 35% 60%, #e2e8f0, transparent),
+            radial-gradient(3px 3px at 55% 15%, #ffffff, transparent),
+            radial-gradient(2px 2px at 75% 45%, #cbd5e1, transparent),
+            radial-gradient(2.5px 2.5px at 90% 80%, #ffffff, transparent);
+        background-size: 320px 320px;
+
+        &--slow {
+            opacity: 0.45;
+            animation: snowfall 16s linear infinite;
+        }
+
+        &--fast {
+            opacity: 0.75;
+            background-size: 220px 220px;
+            animation: snowfall 10s linear infinite;
+        }
+    }
+}
+
+.garland {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    pointer-events: none;
+
+    &__wire {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 40px;
+        border-top: 3px solid #1e293b;
+    }
+
+    &__bulb {
+        width: 14px;
+        height: 22px;
+        border-radius: 50% 50% 45% 45%;
+        margin-top: -2px;
+        animation: glowPulse 1.8s ease-in-out infinite alternate;
+
+        &--red {
+            background-color: $color-accent-red;
+            box-shadow: 0 4px 16px $color-accent-red;
+        }
+
+        &--gold {
+            background-color: $color-accent-gold;
+            box-shadow: 0 4px 16px $color-accent-gold;
+            animation-delay: 0.4s;
+        }
+
+        &--cyan {
+            background-color: $color-accent-cyan;
+            box-shadow: 0 4px 16px $color-accent-cyan;
+            animation-delay: 0.8s;
+        }
+
+        &--emerald {
+            background-color: $color-accent-emerald;
+            box-shadow: 0 4px 16px $color-accent-emerald;
+            animation-delay: 1.2s;
+        }
+    }
+}
+
+.card {
+    width: 100%;
+    max-width: $card-width;
+
+    &__toggle {
+        display: none;
+
+        &:checked ~ .card__scene .card__inner {
+            transform: rotateY(180deg);
+        }
+    }
+
+    &__scene {
+        width: 100%;
+        height: $card-height;
+        perspective: 1400px;
+    }
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform $transition-flip;
+    }
+
+    &__face {
+        position: absolute;
+        inset: 0;
+        border-radius: $radius-card;
+        padding: $spacing-lg;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: $shadow-card;
+
+        &--front {
+            background: linear-gradient(155deg, $color-surface-front 0%, $color-bg-deep 100%);
+            border: 2px solid $color-border-gold;
+            text-align: center;
+            align-items: center;
+        }
+
+        &--back {
+            background-color: $color-surface-back;
+            color: $color-text-dark;
+            border: 2px solid $color-accent-gold;
+            transform: rotateY(180deg);
+        }
+    }
+
+    &__badge {
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background-color: rgba($color-accent-gold, 0.14);
+        border: 1px solid $color-border-gold;
+        color: $color-accent-gold;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        font-family: $font-display;
+        font-size: 40px;
+        line-height: 1.15;
+        color: $color-text-light;
+    }
+
+    &__year {
+        font-family: $font-display;
+        font-size: 86px;
+        font-weight: 700;
+        line-height: 1;
+        color: $color-accent-gold;
+        text-shadow: $shadow-gold;
+    }
+
+    &__subtitle {
+        font-size: 15px;
+        line-height: 1.65;
+        color: $color-text-muted;
+    }
+
+    &__heading {
+        font-family: $font-display;
+        font-size: 28px;
+        color: $color-bg-night;
+        padding-bottom: 12px;
+        border-bottom: 2px solid rgba($color-accent-gold, 0.5);
+    }
+
+    &__wishes {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &__wish-item {
+        position: relative;
+        padding-left: 22px;
+        font-size: 15px;
+        line-height: 1.5;
+
+        &::before {
+            content: "❄";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: $color-accent-red;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding-top: 14px;
+        border-top: 1px solid #e2e8f0;
+    }
+
+    &__signature {
+        font-family: $font-display;
+        font-style: italic;
+        font-size: 16px;
+        color: #475569;
+    }
+
+    &__button {
+        display: inline-block;
+        width: 100%;
+        padding: 13px 20px;
+        background-color: $color-accent-red;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+        border-radius: $radius-btn;
+        cursor: pointer;
+        user-select: none;
+        transition: background-color $transition-fast, transform $transition-fast;
+
+        &:hover {
+            background-color: $color-accent-red-hover;
+            transform: translateY(-2px);
+        }
+
+        &--secondary {
+            background-color: $color-bg-night;
+
+            &:hover {
+                background-color: #1e293b;
+            }
+        }
+    }
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(320px);
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        opacity: 0.45;
+        transform: scale(0.92);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.06);
+    }
+}

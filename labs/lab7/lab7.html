@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №7 - Новорічна Листівка</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lab7.css">
+</head>
+<body class="page">
+
+    <a href="../../index.html" class="page__back-link">На головну</a>
+
+    <div class="snow" aria-hidden="true">
+        <div class="snow__layer snow__layer--slow"></div>
+        <div class="snow__layer snow__layer--fast"></div>
+    </div>
+
+    <header class="garland" aria-hidden="true">
+        <div class="garland__wire">
+            <span class="garland__bulb garland__bulb--red"></span>
+            <span class="garland__bulb garland__bulb--gold"></span>
+            <span class="garland__bulb garland__bulb--cyan"></span>
+            <span class="garland__bulb garland__bulb--emerald"></span>
+            <span class="garland__bulb garland__bulb--red"></span>
+            <span class="garland__bulb garland__bulb--gold"></span>
+            <span class="garland__bulb garland__bulb--cyan"></span>
+            <span class="garland__bulb garland__bulb--emerald"></span>
+            <span class="garland__bulb garland__bulb--red"></span>
+            <span class="garland__bulb garland__bulb--gold"></span>
+        </div>
+    </header>
+
+    <main class="page__container">
+        <section class="card">
+            <input type="checkbox" id="card-toggle" class="card__toggle">
+
+            <div class="card__scene">
+                <div class="card__inner">
+                    <article class="card__face card__face--front">
+                        <span class="card__badge">Святкове вітання</span>
+                        <h1 class="card__title">З Новим Роком!</h1>
+                        <div class="card__year">2027</div>
+                        <p class="card__subtitle">
+                            Нехай цей рік принесе чистий код без багів, 
+                            закриту сесію з першого разу та великі проєкти.
+                        </p>
+                        <label for="card-toggle" class="card__button">Відкрити листівку ✨</label>
+                    </article>
+
+                    <article class="card__face card__face--back">
+                        <h2 class="card__heading">Побажання на 2027 рік</h2>
+                        <ul class="card__wishes">
+                            <li class="card__wish-item">Стабільного аптайму в усіх починаннях та ідеях</li>
+                            <li class="card__wish-item">Швидкого компілювання планів у реальні результати</li>
+                            <li class="card__wish-item">Натхнення, залізних нервів та мирного неба</li>
+                            <li class="card__wish-item">Затишних зимових вечорів у колі близьких людей</li>
+                        </ul>
+                        <div class="card__footer">
+                            <span class="card__signature">З найкращими побажаннями, Костянтин</span>
+                            <label for="card-toggle" class="card__button card__button--secondary">Згорнути</label>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
